@@ -1,0 +1,217 @@
+{
+    "uid": "0a00dc5c-19dc-4fd2-b342-1eda9a35d3f1",
+    "name": "4_Default_Xgboost",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "checking_balance": {
+                            "1 - 200 DM": 0,
+                            "< 0 DM": 1,
+                            "> 200 DM": 2,
+                            "unknown": 3
+                        },
+                        "purpose": {
+                            "business": 0,
+                            "car": 1,
+                            "car0": 2,
+                            "education": 3,
+                            "furniture/appliances": 4,
+                            "renovations": 5
+                        },
+                        "savings_balance": {
+                            "100 - 500 DM": 0,
+                            "500 - 1000 DM": 1,
+                            "< 100 DM": 2,
+                            "> 1000 DM": 3,
+                            "unknown": 4
+                        },
+                        "employment_duration": {
+                            "1 - 4 years": 0,
+                            "4 - 7 years": 1,
+                            "< 1 year": 2,
+                            "> 7 years": 3,
+                            "unemployed": 4
+                        },
+                        "other_credit": {
+                            "bank": 0,
+                            "none": 1,
+                            "store": 2
+                        },
+                        "housing": {
+                            "other": 0,
+                            "own": 1,
+                            "rent": 2
+                        },
+                        "job": {
+                            "management": 0,
+                            "skilled": 1,
+                            "unemployed": 2,
+                            "unskilled": 3
+                        },
+                        "phone": {
+                            "no": 0,
+                            "yes": 1
+                        }
+                    },
+                    "columns": [
+                        "checking_balance",
+                        "purpose",
+                        "savings_balance",
+                        "employment_duration",
+                        "other_credit",
+                        "housing",
+                        "job",
+                        "phone"
+                    ]
+                }
+            ],
+            "categorical_y": {
+                "no": 0,
+                "yes": 1
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "checking_balance": [
+                        "categorical_to_int"
+                    ],
+                    "purpose": [
+                        "categorical_to_int"
+                    ],
+                    "savings_balance": [
+                        "categorical_to_int"
+                    ],
+                    "employment_duration": [
+                        "categorical_to_int"
+                    ],
+                    "other_credit": [
+                        "categorical_to_int"
+                    ],
+                    "housing": [
+                        "categorical_to_int"
+                    ],
+                    "job": [
+                        "categorical_to_int"
+                    ],
+                    "phone": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "2.1.2",
+            "algorithm_name": "Extreme Gradient Boosting",
+            "algorithm_short_name": "Xgboost",
+            "uid": "50641446-fe50-49a6-ab24-cd9a65e35572",
+            "params": {
+                "model_type": "Xgboost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "objective": "binary:logistic",
+                "eta": 0.075,
+                "max_depth": 6,
+                "min_child_weight": 1,
+                "subsample": 1.0,
+                "colsample_bytree": 1.0,
+                "seed": 4,
+                "eval_metric": "logloss",
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "checking_balance": [
+                    "categorical_to_int"
+                ],
+                "purpose": [
+                    "categorical_to_int"
+                ],
+                "savings_balance": [
+                    "categorical_to_int"
+                ],
+                "employment_duration": [
+                    "categorical_to_int"
+                ],
+                "other_credit": [
+                    "categorical_to_int"
+                ],
+                "housing": [
+                    "categorical_to_int"
+                ],
+                "job": [
+                    "categorical_to_int"
+                ],
+                "phone": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_2/X.data",
+            "y_path": "AutoML_2/y.data",
+            "results_path": "AutoML_2"
+        },
+        "learner": {
+            "model_type": "Xgboost",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "objective": "binary:logistic",
+            "eta": 0.075,
+            "max_depth": 6,
+            "min_child_weight": 1,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "seed": 4,
+            "eval_metric": "logloss",
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "4_Default_Xgboost",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "4_Default_Xgboost/learner_fold_0.xgboost.json"
+    ],
+    "predictions_fname": "4_Default_Xgboost/predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.42327519302283256",
+    "train_time": 2.1947357654571533,
+    "is_stacked": false,
+    "joblib_version": "1.4.2",
+    "threshold": 0.1797870397567749
+}

@@ -1,0 +1,88 @@
+{
+    "columns": [
+        "checking_balance",
+        "months_loan_duration",
+        "credit_history",
+        "purpose",
+        "amount",
+        "savings_balance",
+        "employment_duration",
+        "percent_of_income",
+        "years_at_residence",
+        "age",
+        "other_credit",
+        "housing",
+        "existing_loans_count",
+        "job",
+        "dependents",
+        "phone"
+    ],
+    "rows": 750,
+    "cols": 16,
+    "target_is_numeric": false,
+    "columns_info": {
+        "checking_balance": [
+            "categorical",
+            "few_categories"
+        ],
+        "months_loan_duration": [
+            "scale"
+        ],
+        "credit_history": [
+            "scale"
+        ],
+        "purpose": [
+            "categorical",
+            "few_categories"
+        ],
+        "amount": [
+            "scale"
+        ],
+        "savings_balance": [
+            "categorical",
+            "few_categories"
+        ],
+        "employment_duration": [
+            "categorical",
+            "few_categories"
+        ],
+        "percent_of_income": [
+            "scale"
+        ],
+        "years_at_residence": [
+            "scale"
+        ],
+        "age": [
+            "scale"
+        ],
+        "other_credit": [
+            "categorical",
+            "few_categories"
+        ],
+        "housing": [
+            "categorical",
+            "few_categories"
+        ],
+        "existing_loans_count": [
+            "scale"
+        ],
+        "job": [
+            "categorical",
+            "few_categories"
+        ],
+        "dependents": [
+            "scale"
+        ],
+        "phone": [
+            "categorical",
+            "few_categories"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 16,
+    "is_sample_weighted": false,
+    "is_fairness_applied": false,
+    "n_classes": 2
+}

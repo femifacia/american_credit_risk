@@ -1,0 +1,17 @@
+feature,mean_importance
+purpose,0.0
+percent_of_income,0.0
+savings_balance,0.0
+amount,0.0
+existing_loans_count,0.0
+housing,0.0
+other_credit,0.0
+years_at_residence,0.0
+dependents,0.0
+job,0.0
+phone,0.0
+age,0.0008906951671944441
+credit_history,0.008618462283640693
+months_loan_duration,0.03919575312826553
+employment_duration,0.04258764380785727
+checking_balance,0.20803467901485825

@@ -1,0 +1,16 @@
+if (checking_balance > 1.5) and (amount <= 10598.0) and (age > 22.5) then class: no (proba: 91.16%) | based on 249 samples
+
+if (checking_balance <= 1.5) and (months_loan_duration > 11.5) and (amount > 1395.0) then class: no (proba: 57.81%) | based on 192 samples
+
+if (checking_balance <= 1.5) and (months_loan_duration > 11.5) and (amount <= 1395.0) then class: yes (proba: 65.52%) | based on 58 samples
+
+if (checking_balance <= 1.5) and (months_loan_duration <= 11.5) and (credit_history > 55.0) then class: no (proba: 83.33%) | based on 48 samples
+
+if (checking_balance > 1.5) and (amount <= 10598.0) and (age <= 22.5) then class: no (proba: 55.56%) | based on 9 samples
+
+if (checking_balance > 1.5) and (amount > 10598.0) and (months_loan_duration <= 54.0) then class: yes (proba: 100.0%) | based on 3 samples
+
+if (checking_balance <= 1.5) and (months_loan_duration <= 11.5) and (credit_history <= 55.0) then class: yes (proba: 100.0%) | based on 2 samples
+
+if (checking_balance > 1.5) and (amount > 10598.0) and (months_loan_duration > 54.0) then class: no (proba: 100.0%) | based on 1 samples
+

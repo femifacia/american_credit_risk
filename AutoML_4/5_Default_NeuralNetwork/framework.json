@@ -1,0 +1,350 @@
+{
+    "uid": "3dfd3cea-6b7e-4602-8e73-fdd59ab2dd1c",
+    "name": "5_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "checking_balance": {
+                            "1 - 200 DM": 0,
+                            "< 0 DM": 1,
+                            "> 200 DM": 2,
+                            "unknown": 3
+                        },
+                        "purpose": {
+                            "business": 0,
+                            "car": 1,
+                            "car0": 2,
+                            "education": 3,
+                            "furniture/appliances": 4,
+                            "renovations": 5
+                        },
+                        "savings_balance": {
+                            "100 - 500 DM": 0,
+                            "500 - 1000 DM": 1,
+                            "< 100 DM": 2,
+                            "> 1000 DM": 3,
+                            "unknown": 4
+                        },
+                        "employment_duration": {
+                            "1 - 4 years": 0,
+                            "4 - 7 years": 1,
+                            "< 1 year": 2,
+                            "> 7 years": 3,
+                            "unemployed": 4
+                        },
+                        "other_credit": {
+                            "bank": 0,
+                            "none": 1,
+                            "store": 2
+                        },
+                        "housing": {
+                            "other": 0,
+                            "own": 1,
+                            "rent": 2
+                        },
+                        "job": {
+                            "management": 0,
+                            "skilled": 1,
+                            "unemployed": 2,
+                            "unskilled": 3
+                        },
+                        "phone": {
+                            "no": 0,
+                            "yes": 1
+                        }
+                    },
+                    "columns": [
+                        "checking_balance",
+                        "purpose",
+                        "savings_balance",
+                        "employment_duration",
+                        "other_credit",
+                        "housing",
+                        "job",
+                        "phone"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        1.246334273667509,
+                        11.558827468460532,
+                        4500.395878437179,
+                        1.5932293326565876,
+                        2766.1464569166114,
+                        1.1351866924149236,
+                        1.3645691577228256,
+                        1.107226333053447,
+                        1.0931133737224812,
+                        11.34017426279836,
+                        0.4080905673017692,
+                        0.5359506221317003,
+                        0.6176530540244295,
+                        0.9629622977167253,
+                        0.3763502937054031,
+                        0.4913642351303187
+                    ],
+                    "mean": [
+                        1.6156583629893237,
+                        20.179715302491104,
+                        3117.386120996441,
+                        2.583629893238434,
+                        3193.838078291815,
+                        2.1565836298932384,
+                        1.49288256227758,
+                        2.994661921708185,
+                        2.8451957295373664,
+                        35.7846975088968,
+                        0.8932384341637011,
+                        1.0676156583629892,
+                        1.414590747330961,
+                        1.2793594306049823,
+                        1.1708185053380782,
+                        0.40747330960854095
+                    ],
+                    "var": [
+                        1.5533491217183168,
+                        133.60649244563768,
+                        20253563.062654346,
+                        2.538379706437355,
+                        7651566.221112323,
+                        1.2886488266359344,
+                        1.8620489862083816,
+                        1.2259501526069831,
+                        1.1948968478109447,
+                        128.59955231063435,
+                        0.1665379111206798,
+                        0.2872430693633566,
+                        0.38149529514570485,
+                        0.927296386823875,
+                        0.1416395435721432,
+                        0.24143881156520308
+                    ],
+                    "n_samples_seen": 562,
+                    "n_features_in": 16,
+                    "columns": [
+                        "checking_balance",
+                        "months_loan_duration",
+                        "credit_history",
+                        "purpose",
+                        "amount",
+                        "savings_balance",
+                        "employment_duration",
+                        "percent_of_income",
+                        "years_at_residence",
+                        "age",
+                        "other_credit",
+                        "housing",
+                        "existing_loans_count",
+                        "job",
+                        "dependents",
+                        "phone"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "no": 0,
+                "yes": 1
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "checking_balance": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "months_loan_duration": [
+                        "scale_normal"
+                    ],
+                    "credit_history": [
+                        "scale_normal"
+                    ],
+                    "purpose": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "amount": [
+                        "scale_normal"
+                    ],
+                    "savings_balance": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "employment_duration": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "percent_of_income": [
+                        "scale_normal"
+                    ],
+                    "years_at_residence": [
+                        "scale_normal"
+                    ],
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "other_credit": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "housing": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "existing_loans_count": [
+                        "scale_normal"
+                    ],
+                    "job": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "dependents": [
+                        "scale_normal"
+                    ],
+                    "phone": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.5.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "53791bdb-0e42-444c-99fd-72cb0da2c4d8",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 5,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "checking_balance": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "months_loan_duration": [
+                    "scale_normal"
+                ],
+                "credit_history": [
+                    "scale_normal"
+                ],
+                "purpose": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "amount": [
+                    "scale_normal"
+                ],
+                "savings_balance": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "employment_duration": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "percent_of_income": [
+                    "scale_normal"
+                ],
+                "years_at_residence": [
+                    "scale_normal"
+                ],
+                "age": [
+                    "scale_normal"
+                ],
+                "other_credit": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "housing": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "existing_loans_count": [
+                    "scale_normal"
+                ],
+                "job": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "dependents": [
+                    "scale_normal"
+                ],
+                "phone": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_4/X.data",
+            "y_path": "AutoML_4/y.data",
+            "results_path": "AutoML_4"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 5,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "5_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "5_Default_NeuralNetwork/learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "5_Default_NeuralNetwork/predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": "0.5450831460300564",
+    "train_time": 2.2379002571105957,
+    "is_stacked": false,
+    "joblib_version": "1.4.2",
+    "threshold": 0.31436050152187234
+}
